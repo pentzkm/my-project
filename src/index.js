@@ -136,3 +136,10 @@ let currentDate = new Date();
 currentDateElement.innerHTML = formatDate(currentDate);
 
 console.log("Forecast + toggle fix deployed");
+function searchCity(city) {
+  let apiKey = "63d87667o9c670bt316413323c2af6f9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+searchCity("Paris");
