@@ -101,8 +101,9 @@ function getForecast(coordinates) {
 
 function displayCelsius(event) {
   event.preventDefault();
-  let tempElement = document.querySelector(".current-temperature-value");
+  if (fahrenheitTemperature === null) return;
 
+  let tempElement = document.querySelector(".current-temperature-value");
   let celsius = ((fahrenheitTemperature - 32) * 5) / 9;
   tempElement.innerHTML = Math.round(celsius);
 
@@ -112,8 +113,9 @@ function displayCelsius(event) {
 
 function displayFahrenheit(event) {
   event.preventDefault();
-  let tempElement = document.querySelector(".current-temperature-value");
+  if (fahrenheitTemperature === null) return;
 
+  let tempElement = document.querySelector(".current-temperature-value");
   tempElement.innerHTML = fahrenheitTemperature;
 
   document.querySelector("#celsius-link").classList.remove("active");
@@ -132,3 +134,5 @@ searchForm.addEventListener("submit", handleSearch);
 let currentDateElement = document.querySelector("#current-date");
 let currentDate = new Date();
 currentDateElement.innerHTML = formatDate(currentDate);
+
+console.log("Forecast + toggle fix deployed");
