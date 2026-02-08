@@ -46,10 +46,6 @@ main {
   padding: 30px 0;
 }
 
-.current-temperature {
-  font-size: 48px;
-}
-
 .current-weather {
   display: flex;
   justify-content: space-between;
@@ -60,6 +56,7 @@ main {
   font-weight: 900;
   margin: 0;
 }
+
 .current-details {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
@@ -69,6 +66,10 @@ main {
 
 .current-details strong {
   color: #f65282;
+}
+
+.current-temperature {
+  font-size: 48px;
 }
 
 .current-temperature-icon {
@@ -83,16 +84,52 @@ main {
   font-weight: bold;
 }
 
-.current-temperature-unit {
-  font-size: 28px;
-  position: relative;
-  top: -38px;
+/* Units toggle */
+.units {
+  font-size: 16px;
+  margin-left: 5px;
+}
+
+.units a {
+  text-decoration: none;
+  color: #885df1;
+  cursor: pointer;
+}
+
+.units .active {
+  color: black;
+  cursor: default;
+  font-weight: bold;
+}
+
+/* Forecast styling */
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.weather-forecast-date {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.weather-forecast-temperatures {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.weather-forecast-temperature-max {
+  font-weight: bold;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 4px;
 }
 
 footer {
   border-top: 1px solid #f9f7fe;
   text-align: center;
   padding-top: 15px;
-
   color: rgba(39, 33, 66, 0.4);
 }
